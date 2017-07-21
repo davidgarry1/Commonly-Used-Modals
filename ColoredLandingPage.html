@@ -8,6 +8,23 @@
     <title>Colored Landing Page</title>
     <link href="https://fonts.googleapis.com/css?family=Megrim" rel="stylesheet">
     <style>
+        .loading {
+            font-style: italic;
+        }
+        .welcome:after {
+          content: '';
+          width: 0%;
+          height: 4px;
+          background: white;
+          left: 0;
+          bottom: -7px;
+          position: absolute;
+          -webkit-transition: 0.5s ease;
+          transition: 0.5s ease;
+        }
+        .welcome:hover:after {
+          width: 100%;
+        }
         .vertical-center {
             position: absolute;
             top: calc(50% - 19vw);
@@ -87,7 +104,7 @@
     <div class="se-pre-con">
         <center>
             <div class="vertical-center">
-            Welcome
+            <span class="welcome">Welcome</span>
             <div class="loading">loading...</div>
             </div>
         </center>
